@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JeePS • FAQs</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img alt="Logo placeholder" src="Assets/JEEPS PNG WITH OUTLINE.png" />
+        <div class="title">
+          <strong data-i18n="brand_name">JeePS</strong>
+          <span data-i18n="brand_tagline">Routa de mga vivientes</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Site navigation">
+        <a href="index.html"><span data-i18n="nav_home">Main Page</span><span>›</span></a>
+        <a href="map.html"><span data-i18n="nav_map">Main Map</span><span>›</span></a>
+        <a href="about.html"><span data-i18n="nav_about">About</span><span>›</span></a>
+        <a href="faqs.html"><span data-i18n="nav_faqs">FAQs</span><span>›</span></a>
+        <a href="contact.html"><span data-i18n="nav_contact">Contact</span><span>›</span></a>
+        <a href="blog.html"><span data-i18n="nav_blog">Blog</span><span>›</span></a>
+      </nav>
+
+      <div class="sidebar-footer" data-i18n="footer_note">Prototype build • Content is replaceable</div>
+    </aside>
+
+<main class="main faqs-main">
+  <!-- HERO BAND (pink map tint like the image) -->
+  <section class="faqs-hero" aria-label="FAQs hero">
+    <div class="faqs-hero-inner">
+      <div class="faqs-title-wrap">
+ 
+        <img class="faqs-title-img" src="assets/faqs-title.png" alt="FAQs" />
+      </div>
+
+      <div class="faqs-hero-art" aria-hidden="true">
+        <img class="faqs-qmarks" src="assets/question-marks.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITE AREA (Q/A list) -->
+  <section class="faqs-white" aria-label="FAQs list">
+    <div class="faqs-list">
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <span class="q-badge">Q.</span>
+          <h3 class="q-text" data-i18n="faq_q1">How do I go to [place]?</h3>
+        </div>
+        <div class="faq-a">
+          <span class="a-badge">A.</span>
+          <p class="a-text" data-i18n="faq_a1">
+            By following the Main Map page, you may locate your jeepney’s paradahan location with the help of directions.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <span class="q-badge">Q.</span>
+          <h3 class="q-text" data-i18n="faq_q2">Where can I see routes, schedules, and fares?</h3>
+        </div>
+        <div class="faq-a">
+          <span class="a-badge">A.</span>
+          <p class="a-text" data-i18n="faq_a2">
+            All of these can be found in the Main Map page. Please note that schedules may vary depending on arrivals and departures in each location.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <span class="q-badge">Q.</span>
+          <h3 class="q-text" data-i18n="faq_q3">How can I see the live locations of the jeepneys?</h3>
+        </div>
+        <div class="faq-a">
+          <span class="a-badge">A.</span>
+          <p class="a-text" data-i18n="faq_a3">
+            This feature has yet to be implemented due to limited technology available for jeepney drivers.
+          </p>
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <div class="faq-q">
+          <span class="q-badge">Q.</span>
+          <h3 class="q-text" data-i18n="faq_q4">Does this work offline?</h3>
+        </div>
+        <div class="faq-a">
+          <span class="a-badge">A.</span>
+          <p class="a-text" data-i18n="faq_a4">
+            WiFi or mobile data is required for the website to work, so it may update current schedules and fares.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+  </div>
+
+  <div class="modal" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <h2 id="langTitle" data-i18n="modal_title">Choose your language</h2>
+          <p data-i18n="modal_body">This website supports multiple languages. You can change it anytime using the Language button in the sidebar.</p>
+        </div>
+        <button id="closeLangModal" type="button" aria-label="Close" data-i18n="modal_close">Close</button>
+      </div>
+      <div class="lang-grid" id="langOptions"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

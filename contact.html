@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JeePS • Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img alt="Logo placeholder" src="Assets/JEEPS PNG WITH OUTLINE.png" />
+        <div class="title">
+          <strong data-i18n="brand_name">JeePS</strong>
+          <span data-i18n="brand_tagline">Routa de mga vivientes</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Site navigation">
+        <a href="index.html"><span data-i18n="nav_home">Main Page</span><span>›</span></a>
+        <a href="map.html"><span data-i18n="nav_map">Main Map</span><span>›</span></a>
+        <a href="about.html"><span data-i18n="nav_about">About</span><span>›</span></a>
+        <a href="faqs.html"><span data-i18n="nav_faqs">FAQs</span><span>›</span></a>
+        <a href="contact.html"><span data-i18n="nav_contact">Contact</span><span>›</span></a>
+        <a href="blog.html"><span data-i18n="nav_blog">Blog</span><span>›</span></a>
+      </nav>
+
+      <div class="sidebar-footer" data-i18n="footer_note">Prototype build • Content is replaceable</div>
+    </aside>
+
+    <!-- ✅ ONLY ONE MAIN -->
+    <main class="main contact-main">
+      <!-- TOP BAND -->
+<section class="contact-hero">
+  <div class="contact-hero-inner">
+
+    <!-- POSITION WRAPPER -->
+    <div class="contact-logo">
+      <img
+        src="assets/contact-icon.png"
+        alt="Contact Us"
+      />
+    </div>
+
+  </div>
+</section>
+
+      <!-- WHITE AREA -->
+      <section class="contact-white" aria-label="Contact content">
+        <div class="contact-content">
+
+          <!-- LEFT: phone -->
+           <div class="contact-phone"></div>
+          <div class="phone" aria-label="Contact phone">
+            <div class="phone-top">
+              <div class="phone-notch"></div>
+            </div>
+            
+            <div class="phone-screen">
+              <ol class="contact-list">
+                <li>
+                  <div class="contact-name">Marcus Iesu B. Pepito</div>
+                  <div class="contact-meta">0927 517 9704</div>
+                  <a class="contact-link" href="mailto:marcuisesu.pepito@gmail.com">marcuisesu.pepito@gmail.com</a>
+                </li>
+
+                <li>
+                  <div class="contact-name">Fatima-Arasheley S. Mudjahiron</div>
+                  <div class="contact-meta">0916 930 4903</div>
+                  <a class="contact-link" href="mailto:dyangarasheelysabaludjahiron@gmail.com">
+                    dyangarasheelysabaludjahiron@gmail.com
+                  </a>
+                </li>
+
+                <li>
+                  <div class="contact-name">Prince Anthony L. Fajardo</div>
+                  <div class="contact-meta">0954 354 2531</div>
+                  <a class="contact-link" href="mailto:princeanthonyfajardo04@gmail.com">princeanthonyfajardo04@gmail.com</a>
+                </li>
+
+                <li>
+                  <div class="contact-name">Berlie Daniel M. Yap</div>
+                  <div class="contact-meta">0945 436 90172</div>
+                  <a class="contact-link" href="mailto:berlieyap64@gmail.com">berlieyap64@gmail.com</a>
+                </li>
+
+                <li>
+                  <div class="contact-name">Erza A. Soberano</div>
+                  <div class="contact-meta">0951 843 8672</div>
+                  <a class="contact-link" href="mailto:erza.soberano@gmail.com">erza.soberano@gmail.com</a>
+                </li>
+
+                <li>
+                  <div class="contact-name">Stacey Rogue R. Del Mundo</div>
+                  <div class="contact-meta">0992 283 1771</div>
+                  <a class="contact-link" href="mailto:sh240083@adzu.edu.ph">erza.soberano@gmail.com</a>
+                </li>
+                <li>
+                  <div class="contact-name">Sandrielle Janina A. Anitan</div>
+                  <div class="contact-meta">0961 436 1244</div>
+                  <a class="contact-link" href="mailto:sh240083@adzu.edu.ph">anitansandrielle@gmail.coml</a>
+                </li>
+                     <li>
+                  <div class="contact-name"> Jayden Carl Q. Alvarez</div>
+                  <div class="contact-meta">0997 442 0775</div>
+                  <a class="contact-link" href="mailto:sh240083@adzu.edu.ph">alvarezquiamcocarljayden01@gmail.com</a>
+                </li>
+              </ol>
+            </div>
+
+            <div class="phone-side phone-side--left"></div>
+            <div class="phone-side phone-side--right"></div>
+          </div>
+
+          <!-- RIGHT: paragraph -->
+          <div class="contact-note">
+            <p>
+              We’d love to hear from you. Use these contacts to send inquiries, feedback, or requests.
+              Please provide clear and accurate details, keep your message respectful and concise,
+              and allow reasonable time for a response. Proper communication helps us assist you more effectively.
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Language Modal (ONLY ONCE) -->
+  <div class="modal" id="langModal" role="dialog" aria-modal="true" aria-labelledby="langTitle">
+    <div class="modal-panel">
+      <div class="modal-head">
+        <div>
+          <h2 id="langTitle" data-i18n="modal_title">Choose your language</h2>
+          <p data-i18n="modal_body">
+            This website supports multiple languages. You can change it anytime using the Language button in the sidebar.
+          </p>
+        </div>
+        <button id="closeLangModal" type="button" aria-label="Close" data-i18n="modal_close">Close</button>
+      </div>
+      <div class="lang-grid" id="langOptions"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
