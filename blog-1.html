@@ -7,17 +7,140 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="image-blog-body">
-  <main class="image-blog">
-    <!-- Back button -->
-    <a class="image-blog__back" href="blog.html">← Back to Blogs</a>
+<body class="home-body">
+  <div class="app home-app">
 
-    <!-- Full-page image -->
-    <img
-      class="image-blog__img"
-      src="assets/blog-1.png"
-      alt="Blog 1"
-    />
-  </main>
+    <!-- SIDEBAR (same components as your other pages) -->
+    <aside class="sidebar home-sidebar">
+      <a class="brand home-brand" href="index.html">
+        <img alt="Logo placeholder" src="Assets/JEEPS PNG WITH OUTLINE.png" />
+        <div class="title">
+          <strong data-i18n="brand_name">JeePS</strong>
+          <span data-i18n="brand_tagline">Routa de mga vivientes</span>
+        </div>
+      </a>
+
+      <nav class="nav home-nav" aria-label="Site navigation">
+        <a href="index.html"><span data-i18n="nav_home">Main Page</span><span>›</span></a>
+        <a href="map.html"><span data-i18n="nav_map">Main Map</span><span>›</span></a>
+        <a href="about.html"><span data-i18n="nav_about">About</span><span>›</span></a>
+        <a href="faqs.html"><span data-i18n="nav_faqs">FAQs</span><span>›</span></a>
+        <a href="contact.html"><span data-i18n="nav_contact">Contact</span><span>›</span></a>
+        <a class="active" href="blog.html"><span data-i18n="nav_blog">Blog</span><span>›</span></a>
+      </nav>
+
+      <div class="lang-pill">
+        <div>
+          <div style="font-size:12px;color:var(--muted)" data-i18n="current_language">Language</div>
+          <div id="currentLangLabel" style="font-weight:800;color:var(--text)">English</div>
+        </div>
+        <button id="changeLangBtn" type="button" data-i18n="change">Change</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content blog1-page">
+
+      <!-- Back row -->
+      <div class="blog1-topbar">
+        <a class="blog1-back" href="blog.html">← Back to Blogs</a>
+      </div>
+
+      <!-- Hero (illustration area like your screenshot) -->
+      <header class="blog1-hero" aria-label="Blog header illustration">
+        <!-- Use YOUR OWN IMAGE here -->
+        <img
+          class="blog1-hero__img"
+          src="assets/blog1-hero.png"
+          alt="Jeepney illustration banner"
+        />
+      </header>
+
+      <!-- Article Card -->
+      <article class="blog1-card">
+        <h1 class="blog1-title">How to Distinguish the “Right One” for You: Jeepney Edition</h1>
+
+        <p class="blog1-intro">
+          If you’re a regular commuter, there’s always a point where you’ll realize that choosing a jeepney isn’t
+          just about getting on the first one that stops. From names, routes, signs, and the courage to ask questions
+          without feeling embarrassed, all are parts of a whole “commuting system.” For students, notably, knowing how
+          to spot the right jeepney can keep you from getting lost, delayed, or unnecessarily stressed.
+        </p>
+
+        <p class="blog1-intro">
+          The following are measures on how to distinguish the “right one” (jeepney) for you.
+        </p>
+
+        <section class="blog1-section">
+          <h2>Understand the Jeepney Names</h2>
+          <p>
+            Jeepney names are not random. The words painted on the signboard usually represent the main roads, barangays,
+            or landmarks the jeepney passes through. Learning these names takes time, but once you recognize them,
+            commuting becomes easier. The “right one” clearly shows places you actually know or pass regularly.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Do Not Rely on Color Alone</h2>
+          <p>
+            It’s tempting to memorize jeepneys by color or design, but this can be misleading. Two jeepneys can look
+            similar but go in completely different directions. Always check the name and route sign. The right one
+            matches your destination, not just your memory.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Ask, Do Not Be Shy</h2>
+          <p>
+            This is probably the most important rule. If you’re unsure, ask. A simple “Dadaan po ba sa ___?”
+            can prevent a lot of trouble. It’s normal to feel shy, especially as a student, but asking is better than
+            riding silently and panicking later. The right jeepney is one that actually goes where you need to go.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Listen to Other Passengers</h2>
+          <p>
+            Sometimes, the best information comes from fellow commuters. If you hear passengers mentioning places near
+            your destination, that’s usually a good sign. If everyone is getting off far from where you need to be,
+            that might not be the right ride.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Pay Attention to Where It Turns</h2>
+          <p>
+            Even if the sign looks correct, always observe the first few turns. Jeepneys sometimes share names but differ
+            in route details. The right one turns the way you expect it to, like toward familiar streets or landmarks.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Learn From Experience (&amp; Mistakes)</h2>
+          <p>
+            Almost every commuter has boarded the wrong jeepney at least once. Getting lost is part of learning. Each
+            mistake teaches you what signs to trust, which names matter, and when to ask questions. Over time, choosing
+            the right jeepney becomes instinctive.
+          </p>
+        </section>
+
+        <section class="blog1-section">
+          <h2>Confidence Is Part of Commuting</h2>
+          <p>
+            Knowing where you’re going and being confident enough to ask questions makes a big difference. The right
+            jeepney isn’t just about direction—it’s also about how prepared you are as a commuter.
+          </p>
+        </section>
+
+        <p class="blog1-outro">
+          In the end, distinguishing the “right one” is a mix of reading signs, listening carefully, and speaking up
+          when you’re unsure. Jeepney commuting may seem intimidating at first, but once you learn the system,
+          it becomes a skill you carry with you anywhere. Because sometimes, the right jeepney isn’t the one that looks
+          familiar, rather it’s the one you weren’t afraid to ask about.
+        </p>
+      </article>
+
+    </main>
+  </div>
 </body>
 </html>

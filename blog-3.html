@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JeePS • Blog 3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="home-body">
+  <div class="app home-app">
+
+    <!-- SIDEBAR (same as your other pages) -->
+    <aside class="sidebar home-sidebar">
+      <a class="brand home-brand" href="index.html">
+        <img alt="Logo placeholder" src="https://picsum.photos/seed/jeepslogo/96/96" />
+        <div class="title">
+          <strong data-i18n="brand_name">JeePS</strong>
+          <span data-i18n="brand_tagline">Routa de mga vivientes</span>
+        </div>
+      </a>
+
+      <nav class="nav home-nav" aria-label="Site navigation">
+        <a href="index.html"><span data-i18n="nav_home">Main Page</span><span>›</span></a>
+        <a href="map.html"><span data-i18n="nav_map">Main Map</span><span>›</span></a>
+        <a href="about.html"><span data-i18n="nav_about">About</span><span>›</span></a>
+        <a href="faqs.html"><span data-i18n="nav_faqs">FAQs</span><span>›</span></a>
+        <a href="contact.html"><span data-i18n="nav_contact">Contact</span><span>›</span></a>
+        <a class="active" href="blog.html"><span data-i18n="nav_blog">Blog</span><span>›</span></a>
+      </nav>
+
+      <div class="lang-pill">
+        <div>
+          <div style="font-size:12px;color:var(--muted)" data-i18n="current_language">Language</div>
+          <div id="currentLangLabel" style="font-weight:800;color:var(--text)">English</div>
+        </div>
+        <button id="changeLangBtn" type="button" data-i18n="change">Change</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content blog3-page">
+
+      <div class="blog3-topbar">
+        <a class="blog3-back" href="blog.html">← Back to Blogs</a>
+      </div>
+
+      <!-- Poster column -->
+      <div class="blog3-poster">
+
+        <!-- Blue header band + jeep illustration -->
+        <header class="blog3-hero">
+          <div class="blog3-hero__top">
+            <img
+              class="blog3-hero__jeep"
+              src="assets/blog3-jeep.png.png"
+              alt="Jeep illustration"
+            />
+          </div>
+
+          <div class="blog3-hero__bar">
+            <span class="blog3-pin" aria-hidden="true">📍</span>
+            <span class="blog3-dash" aria-hidden="true"></span>
+            <span class="blog3-pin" aria-hidden="true">📍</span>
+          </div>
+        </header>
+
+        <!-- Article card -->
+        <article class="blog3-card">
+  <h1 class="blog3-title">
+    It’s not the Destination, It’s the <span class="blog3-highlight">Places</span> we Discover Along the Way
+  </h1>
+
+  <p class="blog3-text">
+    Known as the Latin City of Asia, Zamboanga is home to numerous tourist attractions that you never knew you passed by.
+  </p>
+
+  <p class="blog3-text">
+    The jeepneys of Zamboanga city are known to travel far and wide, from the heart of the metropolis to the outskirts of town,
+    drivers operate day until night to transport passengers to their destinations.
+  </p>
+
+  <p class="blog3-text">
+    But are the passengers limited to their destinations only as if the entire ride was a blur? It’s not just the destination,
+    but, it’s the ‘places’ we discover along the way.
+  </p>
+
+  <!-- SECTION 1 -->
+  <section class="blog3-section" id="butterfly-garden">
+    <h2 class="blog3-h2">Butterfly garden</h2>
+
+    <figure class="blog3-figure">
+      <img src="assets/blog3-butterfly.png" alt="Butterfly Garden" />
+    </figure>
+
+    <p class="blog3-text">
+      Have a slice of Zamboanga City’s nature paradise! Situated in Pasonanca, the historical capital of Zamboanga City,
+      this place is a must-visit go-to recreational spot among Zamboangueños. There are endless possibilities in the activities
+      you can do here, from picnics, early morning or sunset jogs, zumba workouts, eating out, or even taking your right one for a
+      date under the narra tree.
+    </p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="blog3-section" id="starting-your-day">
+    <h2 class="blog3-h2">Starting your day with a bang</h2>
+
+    <p class="blog3-text">
+      As the clock strikes 5:30AM, before the sun even rises, Zamboangueños are already up and ready, grooving through the rhythm,
+      stretching their muscles from head to toe. If you are looking for a place to start your day and year productively, then
+      Butterfly Garden is the place for you!
+    </p>
+
+    <p class="blog3-text">
+      With the trees surrounding the area and butterflies skirting through the air, the green landscape is a therapeutic ground.
+    </p>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="blog3-section" id="satiation-sensation">
+    <h2 class="blog3-h2">Satiation sensation</h2>
+
+    <p class="blog3-text">
+      Dive into the tempting world of street food at Pasonanca Park! Every step brings a vendor’s warm smile and the irresistible
+      aroma of grilled chicken, pork, and isaw drifting through the air. For those with a sweet tooth, discover stalls offering shaved
+      ice, ice candy, popsicles, and the famous Alegre milk tea truck.
+    </p>
+
+    <p class="blog3-text">
+      Alongside the Pasonanca jeepney’s city stop, its sister route, Sta. Maria also makes a pause here. The Sta. Maria's jeepney
+      traces a scenic path, winding beyond the city’s borders.
+    </p>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="blog3-section" id="look-back">
+    <h2 class="blog3-h2">Look back and reminisce</h2>
+
+    <figure class="blog3-figure">
+      <img src="assets/blog3-park.png" alt="Look back and reminisce" />
+    </figure>
+
+    <p class="blog3-text">
+      Just across from Edwin Andrews Air Base, a burst of childhood nostalgia welcomes you in vivid reds, yellows, greens, and blues.
+      The laughter of children, the gentle sway of timeworn swings, and a mini Zamboanga-style helter-skelter are cherished by locals.
+    </p>
+
+    <p class="blog3-text">
+      This hidden tambayan is the perfect spot for friends, siblings, or family to pause and soak in the joyful clamor of life.
+    </p>
+
+    <p class="blog3-text">
+      Through the eyes of a young adult, the sight of scampering toddlers brings back memories of what life felt like a decade ago.
+    </p>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section class="blog3-section" id="sip-of-performativity">
+    <h2 class="blog3-h2">Sip of performativity</h2>
+
+    <figure class="blog3-figure">
+      <img src="assets/blog3-coffee.png" alt="Sip of performativity" />
+    </figure>
+
+    <p class="blog3-text">
+      Craving a place to express yourself or simply unwind in a cozy cafe? Hop on the Sta. Maria Jeepney and glide down Coffee Street.
+    </p>
+
+    <p class="blog3-text">
+      With signature frappes, lattes, ice cream, donuts, and their playful matcha, this is the spot to soak up city vibes or power through
+      your week’s assignments.
+    </p>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="blog3-section" id="taste-of-vegan">
+    <h2 class="blog3-h2">Taste of vegan cuisine</h2>
+
+    <figure class="blog3-figure">
+      <img src="assets/blog3-vegan.png" alt="Taste of vegan cuisine" />
+    </figure>
+
+    <p class="blog3-text">
+      Embark on a culinary adventure with Zamboanga City’s unique and healthy cuisine. Rising stars among restaurants may be underrated now,
+      but their dishes always dazzle with visual flair.
+    </p>
+
+    <p class="blog3-text">
+      Visit Cosmic Zamboanga, right by the Iglesia Ni Cristo church, which is passed by the Canelar Moret jeepney.
+    </p>
+
+    <p class="blog3-text">
+      According to Mr. Padios, the introduction of Cosmic in Zamboanga City is rooted in an early childhood memory: his mother, herself a vegan,
+      telling her children that one day they would open a vegan restaurant right here in Zamboanga City. Years later, that statement came to fruition
+      with the opening of Cosmic Zamboanga in Barangay Canelar.
+    </p>
+  </section>
+
+  <!-- SECTION 7 -->
+  <section class="blog3-section" id="carnival-capital">
+    <h2 class="blog3-h2">Carnival Capital</h2>
+
+    <figure class="blog3-figure">
+      <img src="assets/blog3-carnival.png" alt="Carnival Capital" />
+    </figure>
+
+    <p class="blog3-text">
+      Just 10 kilometers from the city center, life thrives on the outskirts. Dive into the kaleidoscope of lights at Zamboanga City’s Integrated
+      Bus Terminal while the night is still alive.
+    </p>
+
+    <p class="blog3-text">
+      Hop on the Divisoria or Zambowood jeepneys and discover a lively night market, tempting food stalls, picnic nooks, and carnival rides from
+      Ferris wheels to vikings and frisbees.
+    </p>
+
+    <p class="blog3-text">
+      Take a break from the city's busy landscape; escape the scene and embrace the beauty of IBT!
+    </p>
+  </section>
+</article>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

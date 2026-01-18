@@ -1308,7 +1308,7 @@ img{max-width:100%}
 .about-hero-band{
   position: relative;
   min-height: 420px;
-  overflow: visible;
+  overflow-y: visible;
 
   /* BASE YELLOW IMAGE */
   background-image:
@@ -2360,42 +2360,652 @@ linear-gradient(
 .home-hero-bg { pointer-events: none; }
 
 /* =========================
-   IMAGE-ONLY BLOG PAGE
+   BLOG 1 (ARTICLE STYLE)
    ========================= */
 
-.image-blog-body {
-  margin: 0;
-  background: #000; /* edge color if image doesn't fill exact ratio */
+.blog1-page {
+  padding: 18px 18px 40px;
+  background: #fff;
 }
 
-.image-blog {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+/* Back button row */
+.blog1-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
 }
 
-.image-blog__img {
+.blog1-back {
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Hero banner area */
+.blog1-hero {
+  height: 640px;              /* controls how tall the hero is */
+  border-radius: 18px;
+  overflow: hidden;           /* prevents image from spilling */
+  box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+  background: #dff6ff;
+}
+
+.blog1-hero__img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* whole image visible */
+  height: 100%;               /* makes it fill the hero box */
+  object-fit: cover;          /* crops instead of overlapping */
+  object-position: center top;    /* adjust if needed: top/center */
   display: block;
 }
 
-/* Back button always visible */
-.image-blog__back {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 10;
+/* Article card (white box) */
+.blog1-card {
+  max-width: 860px;
+  margin: -40px auto 0;       /* FIX: reduced overlap */
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  padding: 22px 22px 26px;
+  position: relative;
+  z-index: 2;                 /* ensures card stays above background if needed */
+}
 
+/* Title + text styling */
+.blog1-title {
+  margin: 0 0 14px;
+  font-size: clamp(1.55rem, 2.7vw, 2.15rem);
+  font-weight: 900;
+  color: #3b3b3b;
+}
+
+.blog1-intro,
+.blog1-outro {
+  margin: 0 0 16px;
+  line-height: 1.75;
+  color: #5a5a5a;
+  font-size: 1.02rem;
+}
+
+.blog1-section {
+  margin: 18px 0;
+}
+
+.blog1-section h2 {
+  margin: 0 0 6px;
+  font-size: 1.08rem;
+  font-weight: 900;
+  color: #4a4a4a;
+}
+
+.blog1-section p {
+  margin: 0;
+  line-height: 1.75;
+  color: #5a5a5a;
+}
+
+/* Mobile tuning */
+@media (max-width: 640px) {
+  .blog1-page {
+    padding: 14px 12px 28px;
+  }
+
+  .blog1-card {
+    margin-top: -40px;
+    padding: 18px 16px 20px;
+  }
+}
+
+/* =========================
+   BLOG 2 (REFERENCE STYLE)
+   ========================= */
+
+.blog2-page {
+  padding: 18px 18px 40px;
+  background: #fff;
+}
+
+/* Back row */
+.blog2-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.blog2-back {
   text-decoration: none;
   font-weight: 800;
-  font-size: 14px;
-
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.95);
   color: #111;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Hero illustration banner */
+.blog2-hero {
+  height: 520px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+  background: #dff6ff;
+}
+
+.blog2-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* White card that overlaps */
+.blog2-card {
+  max-width: 860px;
+  margin: -64px auto 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  padding: 22px 22px 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog2-title {
+  margin: 0 0 14px;
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+  font-weight: 900;
+  color: #3b3b3b;
+}
+
+.blog2-intro,
+.blog2-lead {
+  margin: 0 0 14px;
+  line-height: 1.75;
+  color: #5a5a5a;
+  font-size: 1.02rem;
+}
+
+/* Photo inside the card */
+.blog2-figure {
+  margin: 14px 0 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.16);
+  background: #eee;
+}
+
+.blog2-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Colored bands like the reference */
+.blog2-band {
+  margin: 0;
+  padding: 0;
+}
+
+.blog2-band__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 18px 22px 18px;
+  border-radius: 0;
+}
+
+.blog2-band--yellow .blog2-band__inner {
+  background: #fbf1cf;
+}
+
+.blog2-band--pink .blog2-band__inner {
+  background: #f6d2d2;
+}
+
+.blog2-band--green .blog2-band__inner {
+  background: #cfeedd;
+}
+
+.blog2-band__inner h2 {
+  margin: 0 0 10px;
+  font-weight: 900;
+  color: #4a4a4a;
+  font-size: 1.15rem;
+}
+
+/* Tips inside the bands */
+.blog2-tip {
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.blog2-tip:first-of-type {
+  border-top: none;
+}
+
+.blog2-tip h3 {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  font-weight: 900;
+  color: #4a4a4a;
+}
+
+.blog2-tip p {
+  margin: 0;
+  line-height: 1.7;
+  color: #5a5a5a;
+  font-size: 0.98rem;
+}
+
+/* Footer block */
+.blog2-footer {
+  padding: 0;
+}
+
+.blog2-footer__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 18px 22px 24px;
+  color: #5a5a5a;
+  line-height: 1.75;
+}
+
+.blog2-quote {
+  margin-top: 14px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .blog2-page {
+    padding: 14px 12px 28px;
+  }
+
+  .blog2-hero {
+    height: 240px;
+  }
+
+  .blog2-card {
+    margin-top: -36px;
+    padding: 18px 16px 14px;
+  }
+
+  .blog2-band__inner,
+  .blog2-footer__inner {
+    padding: 16px 16px 18px;
+  }
+}
+
+/* =========================
+   BLOG 3 (POSTER STYLE)
+   ========================= */
+
+.blog3-page {
+  padding: 18px 18px 40px;
+  background: #fff;
+}
+
+.blog3-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.blog3-back {
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Center poster column */
+.blog3-poster {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+/* Hero area */
+.blog3-hero__top {
+  background: linear-gradient(180deg, #9ee7ff, #bfefff);
+  padding: 16px 16px 0;
+}
+
+.blog3-hero__jeep {
+  width: 100%;
+  height: 700px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Blue band with dashed line + pins */
+.blog3-hero__bar {
+  background: #0f6fff;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.blog3-pin {
+  font-size: 18px;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+}
+
+.blog3-dash {
+  width: 54%;
+  height: 0;
+  border-top: 4px dashed rgba(255,255,255,0.9);
+}
+
+/* Card body */
+.blog3-card {
+  background: #fff;
+  padding: 18px 22px 26px;
+}
+
+.blog3-title {
+  margin: 6px 0 12px;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 900;
+  color: #3b3b3b;
+}
+
+.blog3-highlight {
+  color: #ff9800;
+  font-weight: 900;
+}
+
+.blog3-text {
+  margin: 0 0 12px;
+  color: #5a5a5a;
+  line-height: 1.75;
+  font-size: 1.01rem;
+}
+
+.blog3-section {
+  padding-top: 10px;
+}
+
+.blog3-h2 {
+  margin: 14px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #4a4a4a;
+}
+
+.blog3-figure {
+  margin: 8px 0 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.14);
+  background: #eee;
+}
+
+.blog3-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blog3-caption {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  color: #6a6a6a;
+}
+
+.blog3-link {
+  color: #0f6fff;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* Small “read more” callout */
+.blog3-callout {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  margin: 14px 0 12px;
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.blog3-callout__img {
+  background: linear-gradient(135deg, #f1f1f1, #dcdcdc);
+  min-height: 120px;
+}
+
+.blog3-callout__body {
+  padding: 12px 12px 12px 0;
+}
+
+.blog3-callout__kicker {
+  font-weight: 900;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.blog3-callout__kicker span {
+  color: #ff2a3a;
+}
+
+.blog3-callout__text {
+  margin: 0 0 10px;
+  color: #6a6a6a;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+.blog3-callout__btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 0.85rem;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #ff2a3a;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .blog3-page {
+    padding: 14px 12px 28px;
+  }
+
+  .blog3-card {
+    padding: 16px 16px 22px;
+  }
+
+  .blog3-hero__jeep {
+    height: 140px;
+  }
+
+  .blog3-dash {
+    width: 62%;
+  }
+
+  .blog3-callout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog3-callout__body {
+    padding: 12px;
+  }
+}
+
+/* =========================
+   BLOG 4 (BLOG 1 STYLE + REF LAYOUT)
+   ========================= */
+
+.blog4-page {
+  padding: 18px 18px 40px;
+  background: #fff;
+}
+
+/* Back row */
+.blog4-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.blog4-back {
+  text-decoration: none;
+  font-weight: 800;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+/* Hero banner */
+.blog4-hero {
+  height: 500px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+  background: #ffd1d8; /* matches your reference vibe */
+}
+
+.blog4-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Main white card overlapping hero */
+.blog4-card {
+  max-width: 860px;
+  margin: -64px auto 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  padding: 22px 22px 26px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Typography */
+.blog4-title {
+  margin: 0 0 12px;
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+  font-weight: 900;
+  color: #3b3b3b;
+}
+
+.blog4-intro,
+.blog4-outro {
+  margin: 0 0 14px;
+  line-height: 1.75;
+  color: #5a5a5a;
+  font-size: 1.02rem;
+}
+
+.blog4-h2 {
+  margin: 18px 0 10px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #4a4a4a;
+}
+
+/* Images inside the card */
+.blog4-figure {
+  margin: 14px 0 14px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.16);
+  background: #eee;
+}
+
+.blog4-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Quote blocks */
+.blog4-quote {
+  padding: 10px 0 6px;
+}
+
+.blog4-quote__text {
+  margin: 0;
+  line-height: 1.75;
+  color: #5a5a5a;
+  font-size: 1.02rem;
+}
+
+.blog4-quote__who {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 900;
+  color: #3b3b3b;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .blog4-page {
+    padding: 14px 12px 28px;
+  }
+
+  .blog4-hero {
+    height: 240px;
+  }
+
+  .blog4-card {
+    margin-top: -36px;
+    padding: 18px 16px 20px;
+  }
+}
+
+
+/* ===== ABOUT: fix right-side blank area ===== */
+
+/* Ensure the about main area truly fills the main column */
+.about-main{
+  width: 100%;
+  max-width: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Make the yellow/map band and white section stretch full width of the main column */
+.about-hero-band,
+.about-white{
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* The white background must cover the whole width */
+.about-white{
+  background: #fff;
+}
+
+/* Keep inner text layout centered WITHOUT shrinking the white background */
+.about-columns{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px; /* breathing room so it doesn’t touch edges */
 }

@@ -7,17 +7,156 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="image-blog-body">
-  <main class="image-blog">
-    <!-- Back button -->
-    <a class="image-blog__back" href="blog.html">← Back to Blogs</a>
+<body class="home-body">
+  <div class="app home-app">
 
-    <!-- Full-page image -->
-    <img
-      class="image-blog__img"
-      src="assets/blog-4.png"
-      alt="Blog 1"
-    />
-  </main>
+    <!-- SIDEBAR (same as your other pages) -->
+    <aside class="sidebar home-sidebar">
+      <a class="brand home-brand" href="index.html">
+        <img alt="Logo placeholder" src="Assets/JEEPS PNG WITH OUTLINE.png" />
+        <div class="title">
+          <strong data-i18n="brand_name">JeePS</strong>
+          <span data-i18n="brand_tagline">Routa de mga vivientes</span>
+        </div>
+      </a>
+
+      <nav class="nav home-nav" aria-label="Site navigation">
+        <a href="index.html"><span data-i18n="nav_home">Main Page</span><span>›</span></a>
+        <a href="map.html"><span data-i18n="nav_map">Main Map</span><span>›</span></a>
+        <a href="about.html"><span data-i18n="nav_about">About</span><span>›</span></a>
+        <a href="faqs.html"><span data-i18n="nav_faqs">FAQs</span><span>›</span></a>
+        <a href="contact.html"><span data-i18n="nav_contact">Contact</span><span>›</span></a>
+        <a class="active" href="blog.html"><span data-i18n="nav_blog">Blog</span><span>›</span></a>
+      </nav>
+
+      <div class="lang-pill">
+        <div>
+          <div style="font-size:12px;color:var(--muted)" data-i18n="current_language">Language</div>
+          <div id="currentLangLabel" style="font-weight:800;color:var(--text)">English</div>
+        </div>
+        <button id="changeLangBtn" type="button" data-i18n="change">Change</button>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content blog4-page">
+
+      <div class="blog4-topbar">
+        <a class="blog4-back" href="blog.html">← Back to Blogs</a>
+      </div>
+
+      <!-- Hero (illustration banner like your reference) -->
+      <header class="blog4-hero" aria-label="Blog header illustration">
+        <!-- Replace with your exported header image -->
+        <img
+          class="blog4-hero__img"
+          src="assets/blog4-hero.png"
+          alt="Jeep illustration header"
+        />
+      </header>
+
+      <!-- Main card -->
+      <article class="blog4-card">
+        <h1 class="blog4-title">Finding Your Way with New Jeepney Routes</h1>
+
+        <p class="blog4-intro">
+          Jeepneys are the most affordable form of mass transit, but unclear routes often make commuting stressful.
+          This website was created to make daily travel easier by providing clear and accessible jeepney routes that
+          commuters can check on their phones with just a tap.
+        </p>
+
+        <p class="blog4-intro">
+          JeePS envisions a future where mass transit is not only affordable but also easy to understand. Through our
+          jeepney stop and route guide, commuters in Zamboanga City can easily locate the “Kings of the Road” and know
+          which jeepney to ride depending on their destination without the fear of getting lost.
+        </p>
+
+        <!-- Big image (like reference) -->
+        <figure class="blog4-figure">
+          <img
+            src="assets/blog4-image-1.jpg"
+            alt="Jeepneys in the city"
+          />
+        </figure>
+
+        <h2 class="blog4-h2">Jeep Chronicles:</h2>
+
+        <!-- Quote/story 1 -->
+        <section class="blog4-quote">
+          <p class="blog4-quote__text">
+            “An affordable ride is all I need to get around the city. I often hear people say they only spend less than
+            20 pesos riding jeepneys, which makes me want to try it too. But as someone who has only lived in Zamboanga City
+            for two years, I’ve always been hesitant because I don’t know the routes and I’m scared of losing my way home.
+            With JeePS, I finally feel confident enough to give jeepney commuting a try.”
+            <span class="blog4-quote__who">– Parra Pho</span>
+          </p>
+        </section>
+
+        <figure class="blog4-figure">
+          <img
+            src="assets/blog4-image-2.jpg"
+            alt="Jeepney on the road"
+          />
+        </figure>
+
+        <!-- Quote/story 2 -->
+        <section class="blog4-quote">
+          <p class="blog4-quote__text">
+            “Since I’m from Lunzuran, I’m used to taking the Veterans route whenever I commute. One day, I decided to try the IBT jeepney,
+            not realizing it takes a different path that goes around the boulevard. When we reached Garden Orchid, I panicked—I didn’t know
+            the area at all. So instead of staying on the jeepney, I got off and took a piaggio to town. Looking back, I realize I could
+            have just stayed on the jeepney, which was heading to the same place, but at the time, the unfamiliar route felt confusing.
+            With a guide like JeePS, I wouldn’t have had to worry about getting lost.”
+            <span class="blog4-quote__who">– Barry A. Saum-aga</span>
+          </p>
+        </section>
+
+        <figure class="blog4-figure">
+          <img
+            src="assets/blog4-image-3.jpg"
+            alt="Public transport terminal"
+          />
+        </figure>
+
+        <!-- Quote/story 3 -->
+        <section class="blog4-quote">
+          <p class="blog4-quote__text">
+            “One time I lined up for a jeepney around 6 p.m., and it was already super crowded. I ended up sitting on the floor because
+            all the seats were taken. Every time someone got off, I tried to take the seat, but someone else always got there first.
+            By the time I finally thought I could sit comfortably, we had already reached my stop! My tip? Sometimes it’s better to wait
+            for the next jeep so you can ride comfortably. With a GPS-based guide like JeePS, commuters could plan ahead, check jeepney
+            locations, predict when one will arrive, and choose a less crowded ride. This way, you don’t have to scramble for a seat,
+            and your travel becomes more relaxed and efficient.”
+            <span class="blog4-quote__who">– Bughy Y. Hadpo</span>
+          </p>
+        </section>
+
+        <figure class="blog4-figure">
+          <img
+            src="assets/blog4-image-4.jpg"
+            alt="Jeepney at night"
+          />
+        </figure>
+
+        <!-- Quote/story 4 -->
+        <section class="blog4-quote">
+          <p class="blog4-quote__text">
+            “I rode a jeepney to Jollibee, thinking it was too far to walk. But when I got there, I realized it was actually really close
+            and I could’ve just walked and saved my fare. I felt like I totally wasted my money! That’s why having something like JeePS
+            would be so helpful. If I could check the route and distance on my phone beforehand, I could decide whether it’s worth riding
+            the jeepney or just walking. It makes commuting smarter, saves money, and helps avoid unnecessary trips.”
+            <span class="blog4-quote__who">– Manny Ong D. River</span>
+          </p>
+        </section>
+
+        <p class="blog4-outro">
+          These stories of confusion, crowded rides and unnecessary trips show just how stressful and challenging commuting can be in
+          Zamboanga City. With JeePS helping bridge this gap by giving commuters a clear route information and nearby jeepney stops,
+          all accessible on their phones, passengers can commute wiser and ride with confidence whenever they want and wherever they are.
+        </p>
+      </article>
+
+    </main>
+  </div>
 </body>
 </html>
